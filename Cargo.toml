@@ -1,0 +1,17 @@
+[workspace]
+members = ["contracts/*"]
+
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Kayanski <kowalski.web3@gmail.com>"]
+edition = "2021"
+homepage = "https://abstract.money"
+documentation = "https://orchestrator.abstract.money/"
+repository = "https://github.com/AbstractSDK/cw-orchestrator"
+license = "GPL-3.0-or-later"
+keywords = ["cosmos", "cosmwasm", "framework"]
+
+
+[workspace.dependencies]
+cosmwasm-std = { version = "1.5.0", features = ["cosmwasm_1_2"] }
