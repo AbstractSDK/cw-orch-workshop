@@ -8,7 +8,7 @@ use cosmwasm_schema::{cw_serde, QueryResponses};
 // cw-orch provides a simplification of the interface with smart-contracts
 // These simplifications turn your endpoints into function that you can call on the smart-contract
 // Learn more in the official documentation : https://orchestrator.abstract.money/contracts/entry-points.html
-// Quest : Replace the `**<<>>**` placeholder with a derive macro to be able to call execute messages
+// Quest : Uncomment line 25 and replace the `**<<>>**` placeholder with a derive macro to be able to call execute messages
 // Verification : Run `cargo run --example interact` successfully to verify quest 1.1, 1.2 and 1.3 are complete
 // You have finished QUEST 1 !
 // Go to QUEST #2.1 once this task is complete
@@ -22,7 +22,7 @@ pub struct InstantiateMsg {
 
 // ANCHOR: exec_msg
 #[cw_serde]
-#[derive(**<<>>**)] // Function generation
+// #[derive(**<<>>**)]
 /// Execute methods for counter
 pub enum ExecuteMsg {
     /// Increment count by one
