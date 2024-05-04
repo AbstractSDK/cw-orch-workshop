@@ -13,7 +13,6 @@ pub const CONTRACT_ID: &str = "counter_contract";
 // You *CAN* specify an optional contract identifier
 // For help, visit the official documentation : https://orchestrator.abstract.money/contracts/interfaces.html
 // Go to QUEST #1.2 once this task is complete
-#[interface(InstantiateMsg, ExecuteMsg, QueryMsg, MigrateMsg, id = CONTRACT_ID)]
 pub struct CounterContract;
 
 // QUEST #1.2
@@ -27,7 +26,7 @@ impl<Chain> Uploadable for CounterContract<Chain> {
     /// Return the path to the wasm file corresponding to the contract
     fn wasm(_chain: &ChainInfoOwned) -> WasmPath {
         artifacts_dir_from_workspace!()
-            .find_wasm_path("counter_contract")
+            .find_wasm_path("**<<>>**")
             .unwrap()
     }
     /// Returns a CosmWasm contract wrapper
@@ -35,7 +34,7 @@ impl<Chain> Uploadable for CounterContract<Chain> {
         Box::new(
             ContractWrapper::new_with_empty(
                 crate::contract::execute,
-                crate::contract::instantiate,
+                **<<>>**,
                 crate::contract::query,
             )
             .with_migrate(crate::contract::migrate),
