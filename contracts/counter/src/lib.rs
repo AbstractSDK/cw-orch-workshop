@@ -7,7 +7,7 @@ pub mod state;
 
 pub use crate::error::ContractError;
 // ANCHOR: fn_re_export
-pub use crate::msg::{ExecuteMsgFns as CounterExecuteMsgFns, QueryMsgFns as CounterQueryMsgFns};
+pub use crate::msg::QueryMsgFns as CounterQueryMsgFns;
 // ANCHOR_END: fn_re_export
 
 // ANCHOR: custom_interface

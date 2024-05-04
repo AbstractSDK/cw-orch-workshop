@@ -1,5 +1,5 @@
 use counter_contract::{
-    msg::InstantiateMsg, CounterContract, CounterExecuteMsgFns, CounterQueryMsgFns,
+    msg::ExecuteMsgFns, msg::InstantiateMsg, CounterContract, CounterQueryMsgFns,
 };
 use cw_orch::{anyhow, prelude::*};
 
