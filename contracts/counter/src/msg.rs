@@ -3,6 +3,16 @@
 
 use cosmwasm_schema::{cw_serde, QueryResponses};
 
+// QUEST #1.3
+// Simplify the interactions with your interface
+// cw-orch provides a simplification of the interface with smart-contracts
+// These simplifications turn your endpoints into function that you can call on the smart-contract
+// Learn more in the official documentation : https://orchestrator.abstract.money/contracts/entry-points.html
+// Quest : Replace the `**<<>>**` placeholders with a derive macro to be able to call execute messages
+// Verification : Run `cargo run --example interact` successfully to verify quest 1.1, 1.2 and 1.3 are complete
+// You have finished QUEST 1 !
+// Go to QUEST #2.1 once this task is complete
+
 #[cw_serde]
 /// Instantiate method for counter
 pub struct InstantiateMsg {

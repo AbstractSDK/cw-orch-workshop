@@ -22,9 +22,6 @@ schemars = "0.8.10"
 thiserror = { version = "1.0.21" }
 cw-orch = { version = "0.22.0" }
 
-[[example]]
-name = "deploy"
-
 [dev-dependencies]
 # Deps for deployment
 dotenv = { version = "0.15.0" }
