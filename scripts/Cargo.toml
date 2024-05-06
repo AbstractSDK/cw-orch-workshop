@@ -1,0 +1,24 @@
+[package]
+name = "scripts"
+version = "0.1.0"
+edition = { workspace = true }
+
+[lib]
+
+[features]
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+# This is NOT a contract, NOR used inside a contract, so we can add cw-orch however we want
+cw-orch = { workspace = true, features = ["daemon"] }
+cw721 = { workspace = true }
+cw721-base = { workspace = true }
+
+# Load the cw721 minter from github to test the deployment/load from an external crate
+cw721-minter = { git = "https://github.com/AbstractSDK/cw-orch-workshop", branch = "solution" }
+
+
+[dev-dependencies]
+# Deps for deployment
+dotenv = { version = "0.15.0" }
+pretty_env_logger = { version = "0.5.0" }

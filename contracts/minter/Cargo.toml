@@ -1,7 +1,7 @@
 [package]
-name = "counter-contract"
-version = "0.11.0"
-description = "counter constract"
+name = "cw721-minter"
+version = "0.1.0"
+description = "example cw821 minter"
 keywords = ["cosmwasm", "blockchain"]
 edition = { workspace = true }
 exclude = [".env"]
@@ -25,10 +25,23 @@ thiserror = { workspace = true }
 # Cw-orch
 cw-orch = { workspace = true }
 
+
+# Utils to make the contract development faster and easier to read
+cw-utils = "1.0.3"
+
+# Cw-orch modified libraries to be able to use the state, the wasms and the code
+cw721-base = { workspace = true }
+cw721 = { workspace = true }
+
+cw_plus-interface = { package = "abstract-cw-plus-interface", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0", features = [
+    "library",
+] }
+cw20 = { package = "abstract-cw20", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0" }
+
 [dev-dependencies]
 # Deps for deployment (environment vars and logger)
 dotenv = { version = "0.15.0" }
 pretty_env_logger = { version = "0.5.0" }
 
-# Adding daemon and osmosis-test-tube features only in dev-dependencies (if provided in dependencies, WASM will NOT compile)
+# Adding daemon and osmosis-test-tube features only in dev-dependencies (otherwise WASM will NOT compile)
 cw-orch = { workspace = true, features = ["daemon", "osmosis-test-tube"] }

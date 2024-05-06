@@ -1,0 +1,12 @@
+{
+  "archway": {
+    "constantine-3": {
+      "code_ids": {
+        "counter_contract": 2483,
+        "nft": 2481,
+        "token": 2482
+      },
+      "default": {}
+    }
+  }
+}
