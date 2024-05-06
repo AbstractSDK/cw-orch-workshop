@@ -79,7 +79,7 @@ Step 2 provides the markers for 2 tests of your implementation!
 
 Now that you know how to export a bundle, you need to learn how to import and work with a bundle.
 
-To make `5-*` examples work, after your have complete quest 5.1, the following env vars need to be defined:
+To make `5-load` example work, after your have complete quest 5.1, the following env vars need to be defined:
 
 - `TEST_MNEMONIC`
 - `RUST_LOG`
