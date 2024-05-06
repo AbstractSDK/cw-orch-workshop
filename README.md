@@ -6,6 +6,8 @@ All the quests are explained as comment inside the code. They all start with `QU
 
 The solutions are located inside the `solution` branch of this repository. [You can access them online](https://github.com/AbstractSDK/cw-orch-workshop/tree/solution), or by running `git checkout solution` inside this repo.
 
+Quest 1 and 5 are independent of all the others, so you can complete them in any order. However, following the steps in order will help you discover cw-orch features in their order of complexity and regularity of use.
+
 ## Quest 1
 
 This quest is aimed at introducing the cw-orch setup. You have 3 different quests:
@@ -77,10 +79,8 @@ Step 2 provides the markers for 2 tests of your implementation!
 
 Now that you know how to export a bundle, you need to learn how to import and work with a bundle.
 
+To make `5-*` examples work, after your have complete quest 5.1, the following env vars need to be defined:
 
-
-
-To make `5-*` examples work, the following env vars need to be defined: 
 - `TEST_MNEMONIC`
 - `RUST_LOG`
 
