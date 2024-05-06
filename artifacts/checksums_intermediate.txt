@@ -1,0 +1,2 @@
+add8130ce5ed9c8effea2545166bc3dfd3730b233dea694d6b56f03c1804073c  counter_contract.wasm
+b9b6254e3fc110cf6029d5f3b4f9d511031254d005eddd72a5dee12ae87e7a0a  cw721_minter.wasm

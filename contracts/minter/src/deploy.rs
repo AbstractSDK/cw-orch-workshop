@@ -8,7 +8,7 @@ use cw_plus_interface::cw20_base::{self, Cw20Base};
 
 use crate::{msg::InstantiateMsg, MinterContract, MinterQueryMsgFns};
 
-pub struct CosmosAdventures<Chain> {
+pub struct CwOrchWorkshop<Chain> {
     pub nft: Cw721<Chain>,
     pub token: Cw20Base<Chain>,
     pub minter: MinterContract<Chain>,
@@ -26,7 +26,7 @@ pub struct DeployData {
     pub token_price: u128,
 }
 
-impl<Chain: CwEnv> Deploy<Chain> for CosmosAdventures<Chain> {
+impl<Chain: CwEnv> Deploy<Chain> for CwOrchWorkshop<Chain> {
     type Error = CwOrchError;
 
     type DeployData = DeployData;
@@ -103,6 +103,11 @@ impl<Chain: CwEnv> Deploy<Chain> for CosmosAdventures<Chain> {
         let nft = Cw721::new("nft", chain.clone());
         let token = Cw20Base::new("token", chain.clone());
         let minter = MinterContract::new(chain.clone());
-        Ok(Self { nft, token, minter })
+
+        let mut bundle = Self { nft, token, minter };
+        // This is very important to be able to export your code correctly
+        bundle.set_contracts_state(None);
+
+        Ok(bundle)
     }
 }

@@ -1,4 +1,4 @@
-use cw721_minter::deploy::{CosmosAdventures, DeployData};
+use cw721_minter::deploy::{CwOrchWorkshop, DeployData};
 use cw_orch::{anyhow, daemon::networks::CONSTANTINE_3, prelude::*};
 
 pub fn main() -> anyhow::Result<()> {
@@ -7,7 +7,7 @@ pub fn main() -> anyhow::Result<()> {
 
     let chain = DaemonBuilder::default().chain(CONSTANTINE_3).build()?;
 
-    CosmosAdventures::deploy_on(
+    CwOrchWorkshop::deploy_on(
         chain.clone(),
         DeployData {
             token_name: "cw20-test".to_string(),

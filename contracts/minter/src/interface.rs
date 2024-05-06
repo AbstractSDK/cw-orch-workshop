@@ -42,10 +42,12 @@ pub fn generic_test<Chain: CwEnv>(
     native_denom: String,
 ) -> cw_orch::anyhow::Result<()> {
     let cw721 = Cw721::new("nft", chain.clone());
-    // cw721.upload()?;
-
+    println!("Quid");
+    cw721.upload()?;
+    println!("Quid");
     let cw20 = Cw20Base::new("cw20", chain.clone());
     cw20.upload()?;
+    println!("Quid");
     cw20.instantiate(
         &cw20_base::InstantiateMsg {
             name: "cw20-test".to_string(),
@@ -66,6 +68,7 @@ pub fn generic_test<Chain: CwEnv>(
     let minter = MinterContract::new(chain.clone());
 
     minter.upload()?;
+    println!("Quid");
     minter.instantiate(
         &InstantiateMsg {
             native_denom: native_denom.to_string(),
