@@ -1,1 +1,2 @@
 deeb1430a4a6fcda7764968fca7ec6f18ce1ef28ad843818b59c04585146e746  counter_contract.wasm
+4848ba42ab97e2886afcb0fad7c0bc569ae9e09674b50b8f227beba0e71ec442  cw721_minter.wasm

@@ -1,0 +1,34 @@
+[package]
+name = "cw721-minter"
+version = "0.1.0"
+description = "example cw821 minter"
+keywords = ["cosmwasm", "blockchain"]
+edition = { workspace = true }
+exclude = [".env"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["export"]
+export = []
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cw-storage-plus = "1.0"
+cw2 = "1.0"
+cosmwasm-schema = "1.2"
+schemars = "0.8.10"
+thiserror = { version = "1.0.21" }
+cw-orch = { version = "0.22.0" }
+cw721-base = { git = "http://github.com/AbstractSDK/cw-nfts.git", version = "0.18.0" }
+cw-utils = "1.0.3"
+cw_plus-interface = { package = "abstract-cw-plus-interface", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0-rc" }
+cw20 = { package = "abstract-cw20", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0-rc" }
+cw721 = "0.18.0"
+
+[dev-dependencies]
+# Deps for deployment
+dotenv = { version = "0.15.0" }
+pretty_env_logger = { version = "0.5.0" }
+cw-orch = { version = "0.22.0", features = ["daemon", "osmosis-test-tube"] }
