@@ -1,11 +1,11 @@
-use cosmwasm_std::{coins, to_json_binary};
+use cosmwasm_std::to_json_binary;
 use cw20::msg::Cw20ExecuteMsgFns;
 use cw20::MinterResponse;
 use cw721::TokensResponse;
 use cw721_base::interface::Cw721;
 use cw721_minter::{
     msg::{ExecuteMsg, InstantiateMsg},
-    MinterContract, MinterExecuteMsgFns, MinterQueryMsgFns,
+    MinterContract, MinterQueryMsgFns,
 };
 use cw_orch::prelude::*;
 use cw_plus_interface::cw20_base::{self, Cw20Base};
@@ -37,8 +37,7 @@ pub fn test_upload() -> cw_orch::anyhow::Result<()> {
     // QUEST #2.2
     // Mint some cw20 tokens to your address. These are needed to be able to mint an NFT
     // Tips :
-    // - Consider importing the `use cw20::msg::Cw20ExecuteMsgFns` trait
-    // - This link can help your as well : https://orchestrator.abstract.money/integrations/daemon.html#interacting-with-contracts
+    // - This link can help you understand how to get your address : https://orchestrator.abstract.money/integrations/daemon.html#interacting-with-contracts
 
     let native_denom = "native_mint";
     // QUEST #2.3

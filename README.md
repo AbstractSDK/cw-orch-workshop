@@ -4,6 +4,8 @@ This repository contains a workshop to learn [cw-orch](https://orchestrator.abst
 
 All the quests are explained as comment inside the code. They all start with `QUEST #x.y`. If you are looking for a quest, you can search the whole folder for those symbols ! For instance for the first quest, look for `QUEST #1.1`.
 
+The solutions are located inside the `solution` branch of this repository. [You can access them online](https://github.com/AbstractSDK/cw-orch-workshop/tree/solution), or by running `git checkout solution` inside this repo.
+
 ## Quest 1
 
 This quest is aimed at introducing the cw-orch setup. You have 3 different quests:
@@ -26,6 +28,8 @@ The `minter` or `cw721-minter` contract is a contract that allows users to mint 
 - Mint an NFT by sending native tokens to the `{"mint":{}}` endpoint.
 - Mint an NFT by using the `{"send":{}}` endpoint of a CW20 token.
 
+In this quest, you will learn how to test your contract inside a local Rust environment. You will see what cw-orch provides and how easy it is to test your contracts! All the code in this quest is actually ran inside [`cw-multi-test`](https://github.com/CosmWasm/cw-multi-test/).
+
 ### Specifics
 
 - The native and cw20 token used for minting are whitelisted at contract instantiation.
@@ -36,14 +40,27 @@ The `minter` or `cw721-minter` contract is a contract that allows users to mint 
 Here are the quests that you will encounter in part 2:
 
 1. Register the contract `reply` endpoint.
-2. Mint fw20 tokens
+2. Mint cw20 tokens
 3. Mint native tokens
 4. Mint an NFT
 5. Mint a second NFT
 
-# Quest 3
+## Quest 3
 
-# Quest 5
+Now we have seen how to test your contracts with a very straightforward and simple syntax inside cw-multi-test. Cw-orch however provides multiple other execution environments:
+
+- Test Tube: executing locally on an actual chain binaries, without leaving your code.
+- Daemon: executing on actual block-chains.
+- .. Learn more about execution environments in the [official cw-orch documentation](https://orchestrator.abstract.money/).
+
+In this quest, we will make the code generic to be able to use it on any chain supported by cw-orch. Let's dive in:
+
+1. Create a generic function that you can call with any CwEnv environment.
+2. Call the function on a `MockBech32` environment
+3. Call the function on a `OsmosisTestTube` environment
+
+
+## Quest 5
 
 
 To make `5-*` examples work, the following env vars need to be defined : 

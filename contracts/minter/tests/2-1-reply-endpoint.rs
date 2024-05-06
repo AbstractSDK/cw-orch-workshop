@@ -1,6 +1,6 @@
 use cw20::MinterResponse;
 use cw721_base::interface::Cw721;
-use cw721_minter::msg::InstantiateMsg;
+use cw721_minter::{msg::InstantiateMsg, MinterContract};
 use cw_orch::prelude::*;
 use cw_plus_interface::cw20_base::{self, Cw20Base};
 
