@@ -23,6 +23,15 @@ impl<Chain> Uploadable for MinterContract<Chain> {
             .find_wasm_path("cw721_minter")
             .unwrap()
     }
+
+    // QUEST #2.1
+    // Registering all the endpoints on the smart-contract
+    // the cw721_minter smart-contract has a reply endpoint registered
+    // It will be included in the wasm by default
+    // However, in order to be able to test this capability, the reply endpoint should also be registered on the contract wrapper
+    // In this quest, you need to make sure the wrapper has the `reply` endpoint registered
+    // To make sure this works, run `cargo test --test 2-reply-endpoint` and make sure the test succeeds
+
     /// Returns a CosmWasm contract wrapper
     fn wrapper() -> Box<dyn MockContract<Empty>> {
         Box::new(
@@ -31,8 +40,7 @@ impl<Chain> Uploadable for MinterContract<Chain> {
                 crate::contract::instantiate,
                 crate::contract::query,
             )
-            .with_migrate(crate::contract::migrate)
-            .with_reply(crate::contract::reply),
+            .with_migrate(crate::contract::migrate),
         )
     }
 }

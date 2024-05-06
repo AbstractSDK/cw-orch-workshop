@@ -21,6 +21,7 @@ pub struct CounterContract;
 // You do that inside the `Uploadable` trait implementation.
 // Quest : Replace the `**<<>>**` placeholders with actual values to complete the interface
 // Verification : Run `cargo run --example upload` successfully to verify quest 1.1 and 1.2 are complete
+// The first compilation of the crate is SUPPOSED to be very slow. The next ones will be faster, don't worry
 // Go to QUEST #1.3 once this task is complete
 impl<Chain> Uploadable for CounterContract<Chain> {
     /// Return the path to the wasm file corresponding to the contract
