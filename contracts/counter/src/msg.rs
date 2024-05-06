@@ -11,7 +11,7 @@ use cosmwasm_schema::{cw_serde, QueryResponses};
 // Quest : Uncomment line 25 and replace the `**<<>>**` placeholder with a derive macro to be able to call execute messages
 // Verification : Run `cargo run --example interact` successfully to verify quest 1.1, 1.2 and 1.3 are complete
 // You have finished QUEST 1 !
-// Go to QUEST #2.1 once this task is complete
+// Go to #2.1 once this task is complete
 
 #[cw_serde]
 /// Instantiate method for counter

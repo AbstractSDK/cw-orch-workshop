@@ -1,12 +1,6 @@
-use cosmwasm_std::{coins, to_json_binary};
-use cw20::msg::Cw20ExecuteMsgFns;
 use cw20::MinterResponse;
-use cw721::TokensResponse;
 use cw721_base::interface::Cw721;
-use cw721_minter::{
-    msg::{ExecuteMsg, InstantiateMsg},
-    MinterContract, MinterExecuteMsgFns, MinterQueryMsgFns,
-};
+use cw721_minter::msg::InstantiateMsg;
 use cw_orch::prelude::*;
 use cw_plus_interface::cw20_base::{self, Cw20Base};
 

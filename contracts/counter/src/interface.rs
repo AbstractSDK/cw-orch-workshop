@@ -12,7 +12,7 @@ pub const CONTRACT_ID: &str = "counter_contract";
 // You *will* specify all the interface messages used inside that contract
 // You *CAN* specify an optional contract identifier
 // For help, visit the official documentation : https://orchestrator.abstract.money/contracts/interfaces.html
-// Go to QUEST #1.2 once this task is complete
+// Go to #1.2 once this task is complete
 pub struct CounterContract;
 
 // QUEST #1.2
@@ -22,7 +22,7 @@ pub struct CounterContract;
 // Quest : Replace the `**<<>>**` placeholders with actual values to complete the interface
 // Verification : Run `cargo run --example upload` successfully to verify quest 1.1 and 1.2 are complete
 // The first compilation of the crate is SUPPOSED to be very slow. The next ones will be faster, don't worry
-// Go to QUEST #1.3 once this task is complete
+// Go to #1.3 once this task is complete
 impl<Chain> Uploadable for CounterContract<Chain> {
     /// Return the path to the wasm file corresponding to the contract
     fn wasm(_chain: &ChainInfoOwned) -> WasmPath {
