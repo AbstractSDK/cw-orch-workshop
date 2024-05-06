@@ -56,12 +56,15 @@ Now we have seen how to test your contracts with a very straightforward and simp
 In this quest, we will make the code generic to be able to use it on any chain supported by cw-orch. Let's dive in:
 
 1. Create a generic function that you can call with any CwEnv environment.
-2. Call the function on a `MockBech32` environment
-3. Call the function on a `OsmosisTestTube` environment
+2. Call the function on a `MockBech32` environment.
+3. Call the function on a `OsmosisTestTube` environment.
+4. Call the function on a `Daemon` environment.
 
+## Quest 4
+
+You are getting better at this ! You have abstracted away the execution environment ! Now let's go one step further and create a bundle that you can export for other developers and users to re-use your project !
 
 ## Quest 5
-
 
 To make `5-*` examples work, the following env vars need to be defined : 
 - `TEST_MNEMONIC`
