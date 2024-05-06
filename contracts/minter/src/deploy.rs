@@ -26,55 +26,35 @@ pub struct DeployData {
     pub token_price: u128,
 }
 
+// Quest #4.1
+// Implement the `Deploy` trait for the `CwOrchWorkshop` struct.
+// This struct will hold all the contracts needed to deploy the NFT project and the minter.
+// I explain the specifics of each function in a comment. I'm letting you implement everything yourself (up to some details)
+// When you thing everything is ready, go to Quest 4.2 to test your code !
 impl<Chain: CwEnv> Deploy<Chain> for CwOrchWorkshop<Chain> {
     type Error = CwOrchError;
 
     type DeployData = DeployData;
 
+    // This function deploys the whole bundle on the `chain` environment. It uploads and instantiates all the necessary contracts and do all the necessary steps
+    // It uses the `data` argument to pass extra parameters or information needed for deployment.
+    // Here we pass all the useful parameters needed for uploading and instantiating the contracts
+    // Don't hesitate to play with the values obviously!
+    // The following tips work a little like solutions, don't read them if you're strong enough !
+    // Tips :
+    // - This function usually starts by uploading all the codes
+    // - You can then instantiate the cw20 token
+    // - Then the minter contract
+    // - Don't forget to set the nft address inside the struct because this is not automatic!
     fn deploy_on(chain: Chain, data: Self::DeployData) -> Result<Self, Self::Error> {
-        let bundle = Self::store_on(chain.clone())?;
-        bundle.token.instantiate(
-            &cw20_base::InstantiateMsg {
-                name: data.token_name,
-                symbol: data.token_symbol,
-                decimals: data.token_decimals,
-                initial_balances: vec![],
-                mint: Some(MinterResponse {
-                    minter: data.token_minter,
-                    cap: None,
-                }),
-                marketing: None,
-            },
-            None,
-            None,
-        )?;
-
-        bundle.minter.instantiate(
-            &InstantiateMsg {
-                native_denom: data.native_denom.to_string(),
-                native_price: data.native_price.into(),
-                cw20_address: bundle.token.address()?.to_string(),
-                cw20_price: data.token_price.into(),
-                nft_code_id: bundle.nft.code_id()?,
-            },
-            None,
-            None,
-        )?;
-
-        let state = bundle.minter.state()?;
-        bundle.nft.set_address(&Addr::unchecked(state.nft_address));
-
-        Ok(bundle)
+        todo!()
     }
 
+    // This function uploads all the necessary contracts.
+    // 1. Upload all the contracts,
+    // 2. Return the constructed struct
     fn store_on(chain: Chain) -> Result<Self, Self::Error> {
-        let Self { nft, token, minter } = Self::load_from(chain)?;
-
-        nft.upload()?;
-        token.upload()?;
-        minter.upload()?;
-
-        Ok(Self { nft, token, minter })
+        todo!()
     }
 
     fn deployed_state_file_path() -> Option<String> {
@@ -89,26 +69,29 @@ impl<Chain: CwEnv> Deploy<Chain> for CwOrchWorkshop<Chain> {
         )
     }
 
+    // This function returns all the contracts used inside of this bundle
+    // To be able to return any contract type, wrap them in a box :
+    // `Box::new(&mut self.contract)`
     fn get_contracts_mut(
         &mut self,
     ) -> Vec<Box<&mut dyn cw_orch::prelude::ContractInstance<Chain>>> {
-        vec![
-            Box::new(&mut self.nft),
-            Box::new(&mut self.token),
-            Box::new(&mut self.minter),
-        ]
+        todo!()
     }
 
+    // This function loads all the contract from the current chain
+    // This doesn't have to verify that the contracts are available on chain and in the local state but it can.
+    //
+    // 1. Upload all the contracts,
+    // 2. Return the constructed struct
     fn load_from(chain: Chain) -> Result<Self, Self::Error> {
-        let nft = Cw721::new("nft", chain.clone());
-        let token = Cw20Base::new("token", chain.clone());
-        let minter = MinterContract::new(chain.clone());
+        todo!();
 
-        let mut bundle = Self { nft, token, minter };
+        // This is very important to be able to export your state (code-ids, addresses) correctly
+        // More on this here: https://orchestrator.abstract.money/setup/workspace/collaboration.html#state-file
+        // Un-comment this line when you have your implementation ready above
+        // bundle.set_contracts_state(None);
 
-        // This is very important to be able to export your code correctly
-        bundle.set_contracts_state(None);
-
-        Ok(bundle)
+        // Return the bundle
+        // Ok(bundle)
     }
 }

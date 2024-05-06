@@ -30,10 +30,13 @@ The `minter` or `cw721-minter` contract is a contract that allows users to mint 
 
 In this quest, you will learn how to test your contract inside a local Rust environment. You will see what cw-orch provides and how easy it is to test your contracts! All the code in this quest is actually ran inside [`cw-multi-test`](https://github.com/CosmWasm/cw-multi-test/).
 
+We will re-use the cw20 and cw721 standard implementations from other projects. You will learn a little about inter-operability and working with other projects.
+
 ### Specifics
 
 - The native and cw20 token used for minting are whitelisted at contract instantiation.
 - The contract is only able to mint 1 NFT per block per address. So if you want to mint an NFT for the same account, you need to wait at least 1 block.
+- We won't touch at the contract code at all. Feel free to browse it though, there may be some hidden good (and maybe bad ?) practices that you can re-use in your own projects !
 
 ### Sub-quests
 
@@ -62,11 +65,22 @@ In this quest, we will make the code generic to be able to use it on any chain s
 
 ## Quest 4
 
-You are getting better at this ! You have abstracted away the execution environment ! Now let's go one step further and create a bundle that you can export for other developers and users to re-use your project !
+You are getting better at this! You have abstracted away the execution environment!
+
+Now let's go one step further and create a bundle that you can export for other developers and users to re-use your project!
+
+This quest only has 1 steps, you should be good to do everything on your own now ! If you don't have everything, don't forget that the solution is available on the `solution` branch.
+
+Step 2 provides the markers for 2 tests of your implementation!
 
 ## Quest 5
 
-To make `5-*` examples work, the following env vars need to be defined : 
+Now that you know how to export a bundle, you need to learn how to import and work with a bundle.
+
+
+
+
+To make `5-*` examples work, the following env vars need to be defined: 
 - `TEST_MNEMONIC`
 - `RUST_LOG`
 

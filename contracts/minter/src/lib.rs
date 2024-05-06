@@ -14,5 +14,5 @@ pub mod interface;
 #[cfg(not(target_arch = "wasm32"))]
 pub use crate::interface::MinterContract;
 
-#[cfg(not(target_arch = "wasm32"))]
+#[cfg(not(target_arch = "wasm32"))] // This one is here to avoid cw-orch landing inside your WASM
 pub mod deploy;
