@@ -1,6 +1,9 @@
 use cw721_minter::deploy::{CwOrchWorkshop, DeployData};
 use cw_orch::{anyhow, daemon::networks::CONSTANTINE_3, prelude::*};
 
+// This script is costly, you will most likely need around 10 CONST testnet tokens to run it
+// Unfortunately the faucet only gives 5.
+// If you want to do testnet interactions, look at the 5-load script inside the scripts folder in the root dir
 pub fn main() -> anyhow::Result<()> {
     dotenv::dotenv()?;
     pretty_env_logger::init();

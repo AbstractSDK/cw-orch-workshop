@@ -6,11 +6,7 @@
         "nft": 2481,
         "token": 2482
       },
-      "default": {
-        "counter_contract": "archway1sgfyy0j74zptzvfvletgs8yuknefhyru9jaargpuugzssv9edg3sj3m7md",
-        "nft": "archway1tswruwnx0rtt0asp22mwduuhgf8yfszclzqvtsvywa93hlyuxkusdsxylg",
-        "token": "archway1pda7a2luc8kelgepyvqy8rgtzdc4jfupxtc0msrwk43qstns5t8q4tq6qf"
-      }
+      "default": {}
     }
   }
 }

@@ -105,6 +105,7 @@ impl<Chain: CwEnv> Deploy<Chain> for CwOrchWorkshop<Chain> {
         let minter = MinterContract::new(chain.clone());
 
         let mut bundle = Self { nft, token, minter };
+
         // This is very important to be able to export your code correctly
         bundle.set_contracts_state(None);
 

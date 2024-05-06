@@ -14,25 +14,34 @@ default = ["export"]
 export = []
 
 [dependencies]
+# Usual Cosmwasm dependencies
 cosmwasm-std = { workspace = true }
-cw-storage-plus = "1.0"
-cw2 = "1.0"
-cosmwasm-schema = "1.2"
-schemars = "0.8.10"
-thiserror = { version = "1.0.21" }
-cw-orch = { version = "0.22.0" }
-cw721-base = { git = "http://github.com/AbstractSDK/cw-nfts.git", version = "0.18.0", features = [
-    "library",
-] }
+cw-storage-plus = { workspace = true }
+cw2 = { workspace = true }
+cosmwasm-schema = { workspace = true }
+schemars = { workspace = true }
+thiserror = { workspace = true }
+
+# Cw-orch
+cw-orch = { workspace = true }
+
+
+# Utils to make the contract development faster and easier to read
 cw-utils = "1.0.3"
+
+# Cw-orch modified libraries to be able to use the state, the wasms and the code
+cw721-base = { workspace = true }
+cw721 = { workspace = true }
+
 cw_plus-interface = { package = "abstract-cw-plus-interface", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0", features = [
     "library",
 ] }
 cw20 = { package = "abstract-cw20", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0" }
-cw721 = "0.18.0"
 
 [dev-dependencies]
-# Deps for deployment
+# Deps for deployment (environment vars and logger)
 dotenv = { version = "0.15.0" }
 pretty_env_logger = { version = "0.5.0" }
-cw-orch = { version = "0.22.0", features = ["daemon", "osmosis-test-tube"] }
+
+# Adding daemon and osmosis-test-tube features only in dev-dependencies (otherwise WASM will NOT compile)
+cw-orch = { workspace = true, features = ["daemon", "osmosis-test-tube"] }
