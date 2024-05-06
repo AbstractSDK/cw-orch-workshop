@@ -6,7 +6,7 @@ use cw_orch::prelude::*;
 
 // Quest #5.1
 // In this quest, you will learn how to load a cw-orch bundle from external crates.
-// Here cw721_minter is now a git dependency.
+// Here cw721-minter is now a git dependency.
 // You should be able with a one-liner to load the bundle directly from this crate.
 // The artifacts AND the state are directly loaded from the crate !
 // Your task is to replace the `todo!()` directive with actual code to load the crate.
@@ -22,8 +22,10 @@ pub fn main() -> cw_orch::anyhow::Result<()> {
     let nft_address = workshop.nft.address()?;
     println!("nft_address is defined here : {}", nft_address);
 
+    // Query the price to pay for an NFT directly on-chain
     let native_price = workshop.minter.state()?.native_price;
 
+    // Mint the NFT
     workshop
         .minter
         .mint(&coins(native_price.u128(), CONSTANTINE_3.gas_denom))?;
