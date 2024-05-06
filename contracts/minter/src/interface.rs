@@ -4,7 +4,6 @@ use cw20::MinterResponse;
 use cw721::TokensResponse;
 use cw721_base::interface::Cw721;
 use cw_orch::environment::ChainInfoOwned;
-// ANCHOR: custom_interface
 use cw_orch::{interface, prelude::*};
 use cw_plus_interface::cw20_base::{self, Cw20Base};
 

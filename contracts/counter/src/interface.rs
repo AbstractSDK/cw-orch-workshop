@@ -1,5 +1,4 @@
 use cw_orch::environment::ChainInfoOwned;
-// ANCHOR: custom_interface
 use cw_orch::{interface, prelude::*};
 
 use crate::msg::{ExecuteMsg, InstantiateMsg, MigrateMsg, QueryMsg};

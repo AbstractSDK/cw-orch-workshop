@@ -11,10 +11,7 @@ use crate::{error::*, execute::_mint, msg::*, query::query_state, state::*};
 pub const CONTRACT_NAME: &str = "crates.io:counter";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
-// ANCHOR: interface_entry
-// ANCHOR: entry_point_line
 #[cfg_attr(feature = "export", entry_point)]
-// ANCHOR_END: entry_point_line
 pub fn instantiate(
     deps: DepsMut,
     env: Env,
@@ -154,4 +151,3 @@ pub fn reply(deps: DepsMut, _env: Env, reply: Reply) -> Result<Response, Contrac
 pub fn migrate(_deps: DepsMut, _env: Env, _msg: MigrateMsg) -> Result<Response, ContractError> {
     Ok(Response::default().add_attribute("action", "migrate"))
 }
-// ANCHOR_END: interface_entry

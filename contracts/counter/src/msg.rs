@@ -20,7 +20,6 @@ pub struct InstantiateMsg {
     pub count: i32,
 }
 
-// ANCHOR: exec_msg
 #[cw_serde]
 // #[derive(**<<>>**)]
 /// Execute methods for counter
@@ -33,9 +32,7 @@ pub enum ExecuteMsg {
         count: i32,
     },
 }
-// ANCHOR_END: exec_msg
 
-// ANCHOR: query_msg
 #[cw_serde]
 #[derive(cw_orch::QueryFns)] // Function generation
 #[derive(QueryResponses)]
@@ -53,7 +50,6 @@ pub struct GetCountResponse {
     /// Current count in the state
     pub count: i32,
 }
-// ANCHOR_END: query_msg
 
 #[cw_serde]
 /// Migrate message for count contract
