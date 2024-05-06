@@ -1,4 +1,7 @@
-use cw721_minter::deploy::{CwOrchWorkshop, DeployData};
+use cw721_minter::{
+    deploy::{CwOrchWorkshop, DeployData},
+    MinterQueryMsgFns,
+};
 use cw_orch::prelude::*;
 
 #[test]
@@ -6,7 +9,7 @@ pub fn mock_deploy() -> cw_orch::anyhow::Result<()> {
     let mock = MockBech32::new("osmosis");
     let native_denom = "native_mint";
 
-    CwOrchWorkshop::deploy_on(
+    let bundle = CwOrchWorkshop::deploy_on(
         mock.clone(),
         DeployData {
             token_name: "cw20-test".to_string(),
@@ -19,5 +22,13 @@ pub fn mock_deploy() -> cw_orch::anyhow::Result<()> {
         },
     )?;
 
+    assert_eq!(
+        bundle.nft.address()?.to_string(),
+        bundle.minter.state()?.nft_address
+    );
+    assert_eq!(
+        bundle.token.address()?.to_string(),
+        bundle.minter.state()?.cw20_address
+    );
     Ok(())
 }
