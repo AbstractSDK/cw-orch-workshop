@@ -9,7 +9,7 @@ pub use crate::error::ContractError;
 pub use crate::msg::{ExecuteMsgFns as MinterExecuteMsgFns, QueryMsgFns as MinterQueryMsgFns};
 
 #[cfg(not(target_arch = "wasm32"))]
-mod interface;
+pub mod interface;
 
 #[cfg(not(target_arch = "wasm32"))]
 pub use crate::interface::MinterContract;

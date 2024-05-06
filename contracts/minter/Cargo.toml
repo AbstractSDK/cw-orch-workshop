@@ -21,10 +21,14 @@ cosmwasm-schema = "1.2"
 schemars = "0.8.10"
 thiserror = { version = "1.0.21" }
 cw-orch = { version = "0.22.0" }
-cw721-base = { git = "http://github.com/AbstractSDK/cw-nfts.git", version = "0.18.0" }
+cw721-base = { git = "http://github.com/AbstractSDK/cw-nfts.git", version = "0.18.0", features = [
+    "library",
+] }
 cw-utils = "1.0.3"
-cw_plus-interface = { package = "abstract-cw-plus-interface", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0-rc" }
-cw20 = { package = "abstract-cw20", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0-rc" }
+cw_plus-interface = { package = "abstract-cw-plus-interface", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0", features = [
+    "library",
+] }
+cw20 = { package = "abstract-cw20", git = "https://github.com/abstractsdk/cw-plus", version = "2.0.0" }
 cw721 = "0.18.0"
 
 [dev-dependencies]

@@ -29,8 +29,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw-plus-interface"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw1",
  "abstract-cw1-subkeys",
@@ -48,7 +48,7 @@ dependencies = [
 [[package]]
 name = "abstract-cw1"
 version = "1.2.2"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
@@ -58,8 +58,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw1-subkeys"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw1",
  "abstract-cw1-whitelist",
@@ -77,8 +77,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw1-whitelist"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw1",
  "abstract-cw2",
@@ -95,7 +95,7 @@ dependencies = [
 [[package]]
 name = "abstract-cw2"
 version = "1.2.2"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
@@ -107,8 +107,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw20"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
@@ -120,8 +120,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw20-base"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw20",
@@ -138,8 +138,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw20-ics20"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw20",
@@ -157,8 +157,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw3"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw20",
  "cosmwasm-schema",
@@ -171,8 +171,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw3-fixed-multisig"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw3",
@@ -188,8 +188,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw3-flex-multisig"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw20",
@@ -209,7 +209,7 @@ dependencies = [
 [[package]]
 name = "abstract-cw4"
 version = "1.2.2"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
@@ -220,8 +220,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw4-group"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw4",
@@ -238,8 +238,8 @@ dependencies = [
 
 [[package]]
 name = "abstract-cw4-stake"
-version = "2.0.0-rc"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+version = "2.0.0"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "abstract-cw2",
  "abstract-cw20",
@@ -917,7 +917,7 @@ dependencies = [
 [[package]]
 name = "cw-controllers"
 version = "1.2.2"
-source = "git+https://github.com/abstractsdk/cw-plus#c72156f87c807997acd07e2cc1462217964ca700"
+source = "git+https://github.com/abstractsdk/cw-plus#89898a3881d2d3375fef7d6c17cdc9e001220c6c"
 dependencies = [
  "cosmwasm-schema",
  "cosmwasm-std",
