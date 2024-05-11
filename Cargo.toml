@@ -22,7 +22,7 @@ schemars = "0.8.10"
 thiserror = { version = "1.0.21" }
 
 
-cw-orch = { version = "0.22.0" }
+cw-orch = { version = "0.22.2" }
 cw721-base = { git = "http://github.com/AbstractSDK/cw-nfts.git", version = "0.18.0", features = [
     "library",
 ] }

@@ -8,7 +8,7 @@ use cw_utils::one_coin;
 use crate::{error::*, execute::_mint, msg::*, query::query_state, state::*};
 
 // version info for migration info
-pub const CONTRACT_NAME: &str = "crates.io:counter";
+pub const CONTRACT_NAME: &str = "crates.io:cw721_minter";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[cfg_attr(feature = "export", entry_point)]
